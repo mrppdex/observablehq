@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Patients&#x27; Profiles | Obervable Playground</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_npm/luxon@3.4.4/+esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@13.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.5.0/esm/arrow1.js">
+<link rel="modulepreload" href="./_npm/lodash@4.17.21/+esm.js">
+<link rel="modulepreload" href="./_npm/arquero@5.4.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.8.5/+esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.13/+esm.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/+esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/+esm.js">
+<link rel="modulepreload" href="./_npm/tslib@2.6.2/+esm.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@23.5.26/+esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@14.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/acorn@8.11.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/+esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/+esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/+esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/+esm.js">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile, FileAttachment} from "./_observablehq/stdlib.js";
+import {registerTable} from "./_observablehq/stdlib/duckdb.js";
+
+registerFile("./data/adae.parquet", {"name":"./data/adae.parquet","path":"./_file/data/adae.88a0bac6.parquet"});
+registerFile("./data/adsl.parquet", {"name":"./data/adsl.parquet","path":"./_file/data/adsl.38a06876.parquet"});
+registerFile("./data/data.parquet", {"name":"./data/data.parquet","path":"./_file/data/data.a9d2f2c8.parquet"});
+registerFile("./data/ex.parquet", {"name":"./data/ex.parquet","path":"./_file/data/ex.2216403f.parquet"});
+registerTable("adae", FileAttachment("./data/adae.parquet"));
+registerTable("adsl", FileAttachment("./data/adsl.parquet"));
+registerTable("adlb", FileAttachment("./data/data.parquet"));
+
+define({id: "6e69e8d0", outputs: ["lx"], body: async () => {
+const lx = await import("./_npm/luxon@3.4.4/+esm.js");
+
+return {lx};
+}});
+
+define({id: "5e20db85", inputs: ["FileAttachment"], outputs: ["adsl_parquet","adae_parquet","adlb_parquet","ex_parquet"], body: (FileAttachment) => {
+const adsl_parquet = FileAttachment('./data/adsl.parquet').parquet();
+const adae_parquet = FileAttachment('./data/adae.parquet').parquet();
+const adlb_parquet = FileAttachment('./data/data.parquet').parquet();
+const ex_parquet   = FileAttachment('./data/ex.parquet').parquet();
+return {adsl_parquet,adae_parquet,adlb_parquet,ex_parquet};
+}});
+
+define({id: "a3e3d172", inputs: ["aq","adsl_parquet","adae_parquet","adlb_parquet","ex_parquet"], outputs: ["adsl","adae","adlb","ex"], body: (aq,adsl_parquet,adae_parquet,adlb_parquet,ex_parquet) => {
+const adsl = aq.fromArrow(adsl_parquet);
+const adae = aq.fromArrow(adae_parquet);
+const adlb = aq.fromArrow(adlb_parquet);
+const ex   = aq.fromArrow(ex_parquet);
+return {adsl,adae,adlb,ex};
+}});
+
+define({id: "c7b10707", inputs: ["view","Inputs","adsl"], outputs: ["usubjid"], body: (view,Inputs,adsl) => {
+const usubjid = view(Inputs.select(adsl.array('usubjid'), {
+  label: "Select Patient", sort: true, unique: true, multiple: true
+}))
+return {usubjid};
+}});
+
+define({id: "8b082386", outputs: ["adsl_dict"], body: () => {
+const adsl_dict = {
+  arm: 'Treatment',
+  trtsdt: 'Treatment Start Date',
+  trtedt: 'Treatment End Date',
+  age_full: 'Age',
+  race: 'Race',
+  ethnic: 'Ethnicity',
+  sex_full: 'Sex'
+};
+return {adsl_dict};
+}});
+
+define({id: "f89cdaa7", inputs: ["view","Inputs","adsl_filtered","aq","adsl_dict"], body: (view,Inputs,adsl_filtered,aq,adsl_dict) => {
+view(Inputs.table(
+  adsl_filtered
+    .derive({ age_full: (d) => d.age + ' ' + d.ageu })
+    .derive({ sex_full: (d) => d.sex=='F' ? 'Female' : 'Male' })
+    .select('usubjid', 'arm', 'trtsdt', 'trtedt', 'age_full', 'race', 'ethnic', 'sex_full')
+    //.groupby('usubjid')
+    .fold(aq.not('usubjid'))
+    .derive({ Parameter: aq.escape((d) => adsl_dict[d.key]) })
+    .select('usubjid', 'Parameter', 'value')
+    .groupby('Parameter')
+    .pivot('usubjid', 'value')
+));
+}});
+
+define({id: "16f110f8", inputs: ["adsl","aq","usubjid","adae","adlb","lab_selection","ex"], outputs: ["adsl_filtered","adae_filtered","adlb_filtered","ex_filtered"], body: (adsl,aq,usubjid,adae,adlb,lab_selection,ex) => {
+const adsl_filtered = adsl
+  .filter(aq.escape((d) => usubjid.includes(d.usubjid)));
+
+const adae_filtered = adae
+  .filter(aq.escape((d) => usubjid.includes(d.usubjid)));
+
+const adlb_filtered = adlb
+  .filter(aq.escape((d) => usubjid.includes(d.usubjid)))
+  .filter(aq.escape((d) => lab_selection.includes(d.param)));
+
+const ex_filtered = ex
+  .filter(aq.escape((d) => usubjid.includes(d.usubjid)));
+return {adsl_filtered,adae_filtered,adlb_filtered,ex_filtered};
+}});
+
+define({id: "bdd36357", inline: true, inputs: ["view","Inputs","ex_filtered"], body: (view,Inputs,ex_filtered) => {
+  view(Inputs.table(ex_filtered))
+}});
+
+define({id: "17895ad3", inline: true, inputs: ["view","Inputs","adae_filtered"], body: (view,Inputs,adae_filtered) => {
+  view(Inputs.table(adae_filtered))
+}});
+
+define({id: "e3b40c76", inputs: ["Inputs","adlb"], outputs: ["lab_selection_input"], body: (Inputs,adlb) => {
+const lab_selection_input = Inputs.select(adlb.array('param'), {sort: true, unique: true, multiple: true});
+return {lab_selection_input};
+}});
+
+define({id: "9ff7cce2", inputs: ["Generators","lab_selection_input"], outputs: ["lab_selection"], body: (Generators,lab_selection_input) => {
+const lab_selection = Generators.input(lab_selection_input);
+return {lab_selection};
+}});
+
+define({id: "b945f8b5", inline: true, inputs: ["view","lab_selection_input"], body: (view,lab_selection_input) => {
+    view(lab_selection_input)
+  
+}});
+
+define({id: "41f7d9cb", inline: true, inputs: ["view","Inputs","adlb_filtered"], body: (view,Inputs,adlb_filtered) => {
+ 
+    view(Inputs.table(adlb_filtered)) 
+  
+}});
+
+define({id: "adc4df61", inputs: ["Plot","earliest_day","latest_day","adlb_filtered","ex_filtered"], outputs: ["lb_plot"], body: (Plot,earliest_day,latest_day,adlb_filtered,ex_filtered) => {
+const lb_plot = (width) => Plot.plot({
+  width,
+  marginBottom: 5,
+  marginLeft: 120,
+  //axis: null
+  y: { grid: true , nice: true},
+  x: { domain: [earliest_day, latest_day], 
+       nice: true, label: ''},
+  fx: { label: ''},
+  color: {legend: true},
+  marks: [
+    //Plot.ruleY([0]),
+    Plot.frame(),
+    Plot.axisY(),
+    Plot.axisFy({ rotate: -90 }),
+    
+    // Lab results
+    Plot.lineY(adlb_filtered, {x: 'ady', y: 'aval', stroke: 'param', fy: "Lab Results", marker: true, tip: true, curve: 'basis', fx: 'usubjid'}),
+    Plot.crosshairX(adlb_filtered, {x: 'ady', y: 'aval', fx: 'usubjid'}),
+    Plot.ruleX(ex_filtered, {x: 'exstdy', strokeWidth: 0.5, strokeDasharray: '2 2', fx: 'usubjid'})
+  ]
+})
+return {lb_plot};
+}});
+
+define({id: "a612bb8f", inputs: ["Plot","_","adae_filtered","earliest_day","latest_day","ex_filtered"], outputs: ["ae_plot"], body: (Plot,_,adae_filtered,earliest_day,latest_day,ex_filtered) => {
+const ae_plot = (width) => Plot.plot({
+  width,
+  marginTop: 0,
+  marginLeft: 120,
+  height: _.uniq(adae_filtered.array('aedecod')).length * 45,
+  y: { grid: true, label: ''},
+  x: { domain: [earliest_day, latest_day],
+       nice: true, label: ''},
+  axis: null,
+  marks: [
+    Plot.frame(),
+    Plot.axisX(),
+    Plot.axisFy(),
+    Plot.axisY({lineWidth: 10, tickFormat: _.capitalize}),
+    Plot.arrow(adae_filtered, {x1: 'astdy', x2: 'aendy', y: 'aedecod', stroke: 'aesev', fy: 'Adverse Events', fx: 'usubjid'}),
+    Plot.dotY(adae_filtered, {x: 'astdy', y: 'aedecod', symbol: 'asteriks', fill: 'aesev', tip: true, fx: 'usubjid'}),
+    Plot.crosshairX(adae_filtered, {x: 'astdy'}),
+    Plot.ruleX(ex_filtered, {x: 'exstdy', strokeWidth: 0.5, strokeDasharray: '2 2', fx: 'usubjid'})
+  ]
+})
+return {ae_plot};
+}});
+
+define({id: "7b986282", inputs: ["Plot","earliest_day","latest_day","ex_filtered"], outputs: ["ex_plot"], body: (Plot,earliest_day,latest_day,ex_filtered) => {
+const ex_plot = (width) => Plot.plot({
+    width,
+    x: {label: 'Study Day', nice: true, domain: [earliest_day, latest_day]},
+    y: {grid: true, label: ''},
+    marginLeft: 120,
+    marginTop: 0,
+    height: 150,
+    axis: null,
+    marks: [
+      Plot.frame(),
+      Plot.axisFy(),
+      Plot.axisX(),
+      Plot.axisY(),
+      Plot.arrow(ex_filtered, {x1: 'exstdy', x2: 'exendy', stroke: 'extrt', y: (d) => d.extrt + " " + d.exdose + d.exdosu, 
+      fy: 'Exposure', fx: 'usubjid',
+      channels: {'Unique Subject Identifier': 'usubjid'}, tip: true}),
+      Plot.ruleX(ex_filtered, {x: 'exstdy', strokeWidth: 0.5, strokeDasharray: '2 2', fx: 'usubjid'})
+    ]
+  })
+return {ex_plot};
+}});
+
+define({id: "7ccf7703", inputs: ["adlb_filtered","adae_filtered","ex_filtered","d3"], outputs: ["all_days","earliest_day","latest_day"], body: (adlb_filtered,adae_filtered,ex_filtered,d3) => {
+const all_days = [...adlb_filtered.array('ady'),
+ ...adae_filtered.array('astdy'),
+ ...adae_filtered.array('aendy'), 
+ ...ex_filtered.array('exstdy'),
+ ...ex_filtered.array('exendy')];
+
+ const earliest_day = d3.min(all_days)-7;
+ const latest_day= d3.max(all_days)+7;
+
+// const date_min = lx.DateTime.fromJSDate(earliest_date).minus({week: 1}).toJSDate();
+
+//const date_max = lx.DateTime.fromJSDate(latest_date).plus({week: 1}).toJSDate();
+return {all_days,earliest_day,latest_day};
+}});
+
+define({id: "cb913d4c", inline: true, inputs: ["usubjid","lab_selection","resize","lb_plot","display"], body: async (usubjid,lab_selection,resize,lb_plot,display) => {
+display(await(
+(usubjid.length==0 || lab_selection.length==0)?'':false || resize( (width) => lb_plot(width))
+))
+}});
+
+define({id: "219f9dcb", inline: true, inputs: ["usubjid","resize","ae_plot","display"], body: async (usubjid,resize,ae_plot,display) => {
+display(await(
+ usubjid.length==0?'':false || resize( (width) => ae_plot(width))
+))
+}});
+
+define({id: "cecca954", inline: true, inputs: ["usubjid","resize","ex_plot","display"], body: async (usubjid,resize,ex_plot,display) => {
+display(await(
+ usubjid.length==0?'':false || resize( (width) => ex_plot(width))
+))
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Obervable Playground</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./adaflow">ADA process flow</a></li>
+    <li class="observablehq-link"><a href="./adam">ADaM</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./test">Patients&#x27; Profiles</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type), h2:first-child, :not(h1) + h2">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#select-subjects">Select Subjects</a></li>
+<li class="observablehq-secondary-link"><a href="#data-tables">Data Tables</a></li>
+<li class="observablehq-secondary-link"><a href="#plots">Plots</a></li>
+</ol>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div id="cell-6e69e8d0" class="observablehq observablehq--block"></div>
+<h1 id="patients'-profiles" tabindex="-1"><a class="observablehq-header-anchor" href="#patients'-profiles">Patients' Profiles</a></h1>
+<div id="cell-5e20db85" class="observablehq observablehq--block"></div>
+<div id="cell-a3e3d172" class="observablehq observablehq--block"></div>
+<h2 id="select-subjects" tabindex="-1"><a class="observablehq-header-anchor" href="#select-subjects">Select Subjects</a></h2>
+<div id="cell-c7b10707" class="observablehq observablehq--block"></div>
+<div id="cell-8b082386" class="observablehq observablehq--block"></div>
+<div id="cell-f89cdaa7" class="observablehq observablehq--block"></div>
+<div id="cell-16f110f8" class="observablehq observablehq--block"></div>
+<h2 id="data-tables" tabindex="-1"><a class="observablehq-header-anchor" href="#data-tables">Data Tables</a></h2>
+<div class="card">
+<h2>Exposure</h2>
+<span id="cell-bdd36357" class="observablehq--loading"></span>
+</div>
+<div class="card">
+<h2>ADAE</h2>
+<span id="cell-17895ad3" class="observablehq--loading"></span>
+</div>
+<div id="cell-e3b40c76" class="observablehq observablehq--block"></div>
+<div id="cell-9ff7cce2" class="observablehq observablehq--block"></div>
+<div class="grid grid-cols-2">
+  <div class="card">
+  <span id="cell-b945f8b5" class="observablehq--loading"></span>
+  </div>
+  <div class="card">
+  <h2>ADLB</h2>
+  <span id="cell-41f7d9cb" class="observablehq--loading"></span>
+  </div>
+</div>
+<h2 id="plots" tabindex="-1"><a class="observablehq-header-anchor" href="#plots">Plots</a></h2>
+<div id="cell-adc4df61" class="observablehq observablehq--block"></div>
+<div id="cell-a612bb8f" class="observablehq observablehq--block"></div>
+<div id="cell-7b986282" class="observablehq observablehq--block"></div>
+<div id="cell-7ccf7703" class="observablehq observablehq--block"></div>
+<div class="card">
+<span id="cell-cb913d4c" class="observablehq--loading"></span>
+<span id="cell-219f9dcb" class="observablehq--loading"></span>
+<span id="cell-cecca954" class="observablehq--loading"></span>
+</div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank">Observable</a> on <a title="2024-03-10T15:50:51">Mar 10, 2024</a>.</div>
+</footer>
+</div>

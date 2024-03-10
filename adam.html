@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>ADaM | Obervable Playground</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/mystyles.486ff1fe.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/mystyles.486ff1fe.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_npm/luxon@3.4.4/+esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@13.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.5.0/esm/arrow1.js">
+<link rel="modulepreload" href="./_npm/lodash@4.17.21/+esm.js">
+<link rel="modulepreload" href="./_npm/arquero@5.4.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.8.5/+esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/+esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.13/+esm.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.28.0/+esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/+esm.js">
+<link rel="modulepreload" href="./_npm/tslib@2.6.2/+esm.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@23.5.26/+esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@14.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/acorn@8.11.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/+esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/+esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/+esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.0/+esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/+esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/+esm.js">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile, FileAttachment} from "./_observablehq/stdlib.js";
+import {registerTable} from "./_observablehq/stdlib/duckdb.js";
+
+registerFile("./data/adae.parquet", {"name":"./data/adae.parquet","path":"./_file/data/adae.88a0bac6.parquet"});
+registerFile("./data/adsl.json", {"name":"./data/adsl.json","mimeType":"application/json","path":"./_file/data/adsl.888608bf.json"});
+registerFile("./data/adsl.parquet", {"name":"./data/adsl.parquet","path":"./_file/data/adsl.38a06876.parquet"});
+registerFile("./data/advs.json", {"name":"./data/advs.json","mimeType":"application/json","path":"./_file/data/advs.b85b7366.json"});
+registerFile("./data/data.parquet", {"name":"./data/data.parquet","path":"./_file/data/data.a9d2f2c8.parquet"});
+registerFile("./data/ex.parquet", {"name":"./data/ex.parquet","path":"./_file/data/ex.2216403f.parquet"});
+registerFile("./data/mh.parquet", {"name":"./data/mh.parquet","path":"./_file/data/mh.01624f51.parquet"});
+registerTable("adae", FileAttachment("./data/adae.parquet"));
+registerTable("adsl", FileAttachment("./data/adsl.parquet"));
+
+define({id: "6e69e8d0", outputs: ["lx"], body: async () => {
+const lx = await import("./_npm/luxon@3.4.4/+esm.js");
+
+return {lx};
+}});
+
+define({id: "0f17940a", inline: true, inputs: ["view","Inputs","hepatic_labs"], body: (view,Inputs,hepatic_labs) => {
+              view(Inputs.table(hepatic_labs))
+            
+}});
+
+define({id: "a4d84b0a", inline: true, inputs: ["view","searchadslInput"], body: (view,searchadslInput) => {
+view(searchadslInput)
+}});
+
+define({id: "1a29e652", inline: true, inputs: ["view","Inputs","searchadsl"], body: (view,Inputs,searchadsl) => {
+view(Inputs.table(searchadsl))
+}});
+
+define({id: "bc62b7b6", inline: true, inputs: ["view","Inputs","data_filtered"], body: (view,Inputs,data_filtered) => {
+            view(Inputs.table(data_filtered))
+          
+}});
+
+define({id: "d16477b3", inline: true, inputs: ["view","Inputs","ex_filtered"], body: (view,Inputs,ex_filtered) => {
+          view(Inputs.table(ex_filtered))
+        
+}});
+
+define({id: "a3bba44a", inline: true, inputs: ["view","Inputs","mh_filtered"], body: (view,Inputs,mh_filtered) => {
+          view(Inputs.table(mh_filtered))
+        
+}});
+
+define({id: "7dfd56f7", inline: true, inputs: ["view","Inputs","adae_filtered"], body: (view,Inputs,adae_filtered) => {
+          view(Inputs.table(adae_filtered))
+        
+}});
+
+define({id: "3df8f200", inputs: ["Inputs","adsl","Generators"], outputs: ["searchadslInput","searchadsl"], body: (Inputs,adsl,Generators) => {
+const searchadslInput = Inputs.search(adsl, {placeholder: "Search adsl..."});
+const searchadsl = Generators.input(searchadslInput);
+return {searchadslInput,searchadsl};
+}});
+
+define({id: "42f0257e", outputs: ["convertJsonToAqTableFormat"], body: () => {
+// Function to convert a JSON array to a format suitable for aq.table
+function convertJsonToAqTableFormat(jsonArray) {
+  // Initialize an empty object to hold the converted data
+  const convertedData = {};
+
+  // Check if the JSON array is not empty
+  if (jsonArray.length > 0) {
+    // Get all keys from the first object as column names
+    const keys = Object.keys(jsonArray[0]);
+    
+    // Iterate over each key to create arrays for each column
+    keys.forEach(key => {
+      convertedData[key] = jsonArray.map(d => d[key]);
+    });
+  }
+
+  return convertedData;
+}
+return {convertJsonToAqTableFormat};
+}});
+
+define({id: "c2cc4024", inputs: ["FileAttachment"], outputs: ["adsl","advs","adlbc","ex","mh","adae"], body: (FileAttachment) => {
+const adsl = FileAttachment('./data/adsl.json').json()
+const advs = FileAttachment('./data/advs.json').json()
+const adlbc = FileAttachment('./data/data.parquet').parquet()
+const ex = FileAttachment('./data/ex.parquet').parquet()
+const mh = FileAttachment('./data/mh.parquet').parquet()
+const adae = FileAttachment('./data/adae.parquet').parquet()
+return {adsl,advs,adlbc,ex,mh,adae};
+}});
+
+define({id: "2d7effd6", inputs: ["convertJsonToAqTableFormat","adsl"], outputs: ["adsl_tbl"], body: (convertJsonToAqTableFormat,adsl) => {
+const adsl_tbl = convertJsonToAqTableFormat(adsl)
+return {adsl_tbl};
+}});
+
+define({id: "a6cefd63", inputs: ["aq","adae","usubjid"], outputs: ["adae_filtered"], body: (aq,adae,usubjid) => {
+const adae_filtered = aq.fromArrow(adae)
+  .filter(aq.escape((d) => d.usubjid===usubjid))
+return {adae_filtered};
+}});
+
+define({id: "d6234365", inputs: ["aq","mh","usubjid"], outputs: ["mh_filtered"], body: (aq,mh,usubjid) => {
+const mh_filtered = aq.fromArrow(mh)
+  .filter(aq.escape((d) => d.usubjid===usubjid))
+return {mh_filtered};
+}});
+
+define({id: "f8386719", inputs: ["aq","ex","usubjid"], outputs: ["ex_filtered"], body: (aq,ex,usubjid) => {
+const ex_filtered = aq.fromArrow(ex)
+  .filter(aq.escape((d) => d.usubjid===usubjid))
+return {ex_filtered};
+}});
+
+define({id: "3cbcb37d", inputs: ["view","Inputs","adsl_tbl"], outputs: ["usubjid"], body: (view,Inputs,adsl_tbl) => {
+const usubjid = view(Inputs.select(adsl_tbl.usubjid, {
+  label: "Unique Subject Identifier",
+  sort: true,
+  unique: true
+}))
+return {usubjid};
+}});
+
+define({id: "c6673746", inputs: ["aq","adsl_tbl","usubjid"], outputs: ["patient_data"], body: (aq,adsl_tbl,usubjid) => {
+const patient_data = aq.table(adsl_tbl)
+  .filter(aq.escape((d) => d.usubjid===usubjid))
+return {patient_data};
+}});
+
+define({id: "2936ffc4", inputs: ["mh_filtered","aq","_"], outputs: ["patient_level_mh"], body: (mh_filtered,aq,_) => {
+const patient_level_mh = mh_filtered
+  .filter(aq.escape(d => /HISTORICAL/.test(d.mhcat)))
+  .groupby('usubjid')
+  .rollup({
+    distinct: aq.op.array_agg_distinct('mhdecod')
+  }).get('distinct').filter(element => element!=='')
+  .map(el => _.capitalize(el)).join(', ')
+return {patient_level_mh};
+}});
+
+define({id: "0979d0e3", inline: true, inputs: ["patient_data","display"], body: async (patient_data,display) => {
+display(await(
+patient_data.get('age',0) + ' ' + patient_data.get('ageu',0)
+))
+}});
+
+define({id: "c74f8539", inline: true, inputs: ["patient_data","display"], body: async (patient_data,display) => {
+display(await(
+patient_data.get('sex',0)==='F'?'Female':'Male'
+))
+}});
+
+define({id: "168f67c9", inline: true, inputs: ["patient_level_mh","display"], body: async (patient_level_mh,display) => {
+display(await(
+patient_level_mh
+))
+}});
+
+define({id: "50603299", inputs: ["Plot","hepatic_labs"], outputs: ["hep_sel"], body: (Plot,hepatic_labs) => {
+const hep_sel = (width) => Plot.plot({
+  width,
+  inset: 20,
+  title: 'Hepatic Lab results',
+  color: {legend: true},
+  symbol: {legend: true},
+  transform: {x: (d) => new Date(d.adt)},
+  x: {label: 'Date'},
+  y: {label: 'Lab Result', grid: true},
+  axis: null,
+  marks:[
+    Plot.axisX(),
+    Plot.axisY(),
+    Plot.lineY(hepatic_labs, {x: 'adt', y: 'aval', fy: 'param', stroke: 'param', marker: true, tip: true}),
+    //Plot.dot(hepatic_labs, {x: 'adt', y: 'aval', fy: 'param', r: 5, stroke: 'green', filter: (d) => d.ablfl==='Y'}),
+    Plot.dot(hepatic_labs, {x: 'adt', y: 'aval', fy: 'param', r: 5, symbol: (d) => d.ablfl=='Y'?'Baseline': 'Post-baseline', stroke: 'param', filter: (d) => d.ablfl==='Y'}),
+    Plot.crosshairX(hepatic_labs, {x: 'adt'})
+  ]
+})
+return {hep_sel};
+}});
+
+define({id: "fa912ca9", inline: true, inputs: ["resize","hep_sel","display"], body: async (resize,hep_sel,display) => {
+display(await(
+resize((width) => hep_sel(width))
+))
+}});
+
+define({id: "131178bf", inputs: ["Inputs"], outputs: ["select_scale_input"], body: (Inputs) => {
+const select_scale_input = Inputs.select(
+  new Map([['Logarythmic', 'log'], 
+           ['Linear', undefined]]), 
+  {
+  value: "Linear", 
+  label: "Y-Axis Scale:"
+  }
+)
+return {select_scale_input};
+}});
+
+define({id: "8eaeaddb", inputs: ["Generators","select_scale_input"], outputs: ["select_scale"], body: (Generators,select_scale_input) => {
+const select_scale = Generators.input(select_scale_input)
+return {select_scale};
+}});
+
+define({id: "8db9be08", inputs: ["Plot","select_scale","hepatic_labs"], outputs: ["lab_scale_input_fun"], body: (Plot,select_scale,hepatic_labs) => {
+const lab_scale_input_fun = (width) => Plot.plot({
+  width,
+  inset: 20,
+  title: 'Hepatic Lab results',
+  color: {legend: true},
+  symbol: {legend: true},
+  transform: {x: (d) => new Date(d.adt)},
+  x: {label: 'Date', nice: true},
+  y: {label: 'Lab Result', grid: true, nice: true,
+      type: select_scale},
+  marks: [
+    Plot.lineY(hepatic_labs, {x: 'adt', y: 'aval', stroke: 'param', marker: true, tip: true}),
+    Plot.dot(hepatic_labs, {x: 'adt', y: 'aval', r: 5, symbol: (d) => d.ablfl=='Y'?'Baseline': 'Post-baseline', stroke: 'param', filter: (d) => d.ablfl==='Y'}),
+    Plot.crosshair(hepatic_labs, {y: 'aval', x: 'adt'})
+  ]
+});
+return {lab_scale_input_fun};
+}});
+
+define({id: "3f161dec", inline: true, inputs: ["view","select_scale_input"], body: (view,select_scale_input) => {
+view(select_scale_input)
+}});
+
+define({id: "5a705099", inline: true, inputs: ["resize","lab_scale_input_fun","display"], body: async (resize,lab_scale_input_fun,display) => {
+display(await(
+resize((width) => lab_scale_input_fun(width))
+))
+}});
+
+define({id: "f3ff595b", inputs: ["aq","adlbc","usubjid"], outputs: ["hepatic_labs"], body: (aq,adlbc,usubjid) => {
+const hepatic_labs = aq.fromArrow(adlbc)
+  .filter((d) => aq.op.includes(['ALB', 'ALT', 'AST', 'BILI'], d.paramcd))
+  .filter(aq.escape((d) => d.usubjid==usubjid))
+return {hepatic_labs};
+}});
+
+define({id: "f3c1b4c9", inputs: ["Plot","adsl","display"], body: async (Plot,adsl,display) => {
+display(await(
+Plot.plot({
+  title: "Boxplot of Heights",
+  marks: [
+    Plot.boxX(adsl, {x: 'heightbl'})
+  ]
+})
+))
+}});
+
+define({id: "813a6383", inputs: ["aq","convertJsonToAqTableFormat","advs"], outputs: ["advs_aq"], body: (aq,convertJsonToAqTableFormat,advs) => {
+const advs_aq = aq.table(convertJsonToAqTableFormat(advs))
+  .orderby('usubjid', 'adt')
+return {advs_aq};
+}});
+
+define({id: "b804aeaa", inputs: ["advs_aq","aq","usubjid"], outputs: ["data_filtered"], body: (advs_aq,aq,usubjid) => {
+const data_filtered = advs_aq.filter(aq.escape(d => d.usubjid===usubjid))
+return {data_filtered};
+}});
+
+define({id: "7fadb026", inputs: ["Plot","usubjid","heart_data_labels","heart_data","display"], body: async (Plot,usubjid,heart_data_labels,heart_data,display) => {
+display(await(
+Plot.plot({
+  title: `Some vital signs of subject ${usubjid}`,
+  marginRight: 180,
+  fy: {label: ''},
+  x: {label: 'Date'},
+  y: {label: 'Value', type: 'log', grid: true, nice: true},
+  axis: null,
+  marks: [
+    Plot.frame(),
+    Plot.axisX(),
+    Plot.axisY(),
+    Plot.axisFy(),
+    //Plot.text(heart_data_labels, {text: 'atpt', fx: 'atpt', fy: 'param', frameAnchor: "top-left", dx: 6, dy: 6, lineWidth: 10}),
+    Plot.text(heart_data_labels, Plot.selectFirst({text: 'atpt', fx: 'atpt', fy: 'param', frameAnchor: "top-left", dx: 6, dy: 6, lineWidth: 10})),
+    Plot.lineY(heart_data, {x: (d) => new Date(d.adt), y: (d) => d.aval, fy: 'param', fx: 'atpt', marker: true, stroke: 'paramcd', tip: true})
+           
+  ]
+})
+))
+}});
+
+define({id: "ce60fac1", inputs: ["data_filtered","aq"], outputs: ["heart_data"], body: (data_filtered,aq) => {
+const heart_data = data_filtered
+  .filter((d) => aq.op.includes(['SYSBP', 'DIABP', 'PULSE'], d.paramcd))
+return {heart_data};
+}});
+
+define({id: "35ab1f6e", inputs: ["heart_data"], outputs: ["heart_data_labels"], body: (heart_data) => {
+const heart_data_labels = heart_data
+  .select('param', 'paramcd', 'atpt')
+  .dedupe()
+return {heart_data_labels};
+}});
+
+define({id: "6403fcc3", inline: true, inputs: ["_","mean_vs","display"], body: async (_,mean_vs,display) => {
+display(await(
+_.round(mean_vs, 2)
+))
+}});
+
+define({id: "bd9c1404", inputs: ["Inputs","data_filtered","aq","checkvalue","thr1"], outputs: ["summ_data_input"], body: (Inputs,data_filtered,aq,checkvalue,thr1) => {
+  const summ_data_input = Inputs.table(data_filtered
+  .groupby('usubjid','param', 'adt')
+  .rollup({
+    mean: aq.op.mean('aval')
+  }),
+  {
+    format: {
+      mean: checkvalue(thr1)
+    }
+  })
+return {summ_data_input};
+}});
+
+define({id: "967a2195", inputs: ["Generators","summ_data_input"], outputs: ["sum_data_val"], body: (Generators,summ_data_input) => {
+const sum_data_val = Generators.input(summ_data_input);
+return {sum_data_val};
+}});
+
+define({id: "3ea822e0", inputs: ["_","sum_data_val"], outputs: ["mean_vs"], body: (_,sum_data_val) => {
+const mean_vs = _.reduce(sum_data_val, (total, row) => total + row.mean, 0)/sum_data_val.length
+return {mean_vs};
+}});
+
+define({id: "1c84b413", inline: true, inputs: ["view","summ_data_input"], body: (view,summ_data_input) => {
+  view(summ_data_input)
+}});
+
+define({id: "0fe16c62", inputs: ["Inputs"], outputs: ["thrInput"], body: (Inputs) => {
+let thrInput = Inputs.text({
+  label: 'Threshold',
+  placeholder: 'Enter Threshold...',
+  value: 50
+})
+return {thrInput};
+}});
+
+define({id: "56b55d8b", inputs: ["Generators","thrInput"], outputs: ["thr1"], body: (Generators,thrInput) => {
+const thr1 = Generators.input(thrInput)
+return {thr1};
+}});
+
+define({id: "393d82b7", inline: true, inputs: ["view","thrInput"], body: (view,thrInput) => {
+  view(thrInput)
+}});
+
+define({id: "fa890d1a", inputs: ["data_filtered","aq"], outputs: ["vs_pivoted"], body: (data_filtered,aq) => {
+const vs_pivoted = data_filtered
+  .groupby('usubjid', 'param', 'adt')
+  .rollup({
+    mean: aq.op.mean('aval')
+  })
+  .groupby('usubjid', 'adt')
+  .pivot('param', 'mean')
+return {vs_pivoted};
+}});
+
+define({id: "cda25a0c", inline: true, inputs: ["view","Inputs","vs_pivoted","checkvalue_color","d3","checkvalue"], body: (view,Inputs,vs_pivoted,checkvalue_color,d3,checkvalue) => {
+  view(Inputs.table(vs_pivoted,
+  {
+    format: {
+      'Pulse Rate (BEATS/MIN)': checkvalue_color(d3.min(vs_pivoted, d => d['Pulse Rate (BEATS/MIN)']),
+d3.max(vs_pivoted, d => d['Pulse Rate (BEATS/MIN)'])),
+      'Height (cm)': checkvalue(150), 
+      'Diastolic Blood Pressure (mmHg)': checkvalue(60),
+      'Systolic Blood Pressure (mmHg)': checkvalue(130)
+    }
+  }))
+}});
+
+define({id: "8f753930", inputs: ["d3","htl"], outputs: ["checkvalue_color"], body: (d3,htl) => {
+function checkvalue_color(minval, maxval) {
+    console.log([minval, maxval]);
+    
+    return (x) => {
+      const colorScale = d3.scaleSequential(d3.interpolateBuPu)
+      return(htl.html`<div 
+      style="background: ${colorScale((x-minval)/(maxval-minval))};
+      color: ${((x-minval)/(maxval-minval)>=0.4)?"white":"black"}">${x.toLocaleString("en-US")}`);
+    };
+}
+return {checkvalue_color};
+}});
+
+define({id: "4fcc2dbb", inputs: ["htl"], outputs: ["checkvalue"], body: (htl) => {
+function checkvalue(threshold) {
+  return (x) => htl.html`<div id="clickme" style="
+    background: ${x>=threshold ? "var(--theme-red)" : ""};
+    color: ${x>=threshold ? "black": "var(--theme-foreground)"};
+  ">${x.toLocaleString("en-US")}`
+}
+return {checkvalue};
+}});
+
+define({id: "1cda1035", inline: true, inputs: ["resize","Plot","usubjid","ex_filtered","display"], body: async (resize,Plot,usubjid,ex_filtered,display) => {
+display(await(
+  resize( (width) =>
+  Plot.plot({
+    width,
+    caption: usubjid,
+    x: {label: 'Study Day', nice: true},
+    y: {grid: true},
+    inset: 10,
+    marginLeft: 150,
+    height: 150,
+    marks: [
+      Plot.ruleY(ex_filtered, {x1: 'exstdy', x2: 'exendy', stroke: 'extrt', y: (d) => d.extrt + " " + d.exdose + d.exdosu, channels: {'Unique Subject Identifier': 'usubjid'}, tip: true}),
+      Plot.dot(ex_filtered, {x: 'exstdy', y: (d) => d.extrt + " " + d.exdose + d.exdosu, stroke: 'extrt', symbol: 'diamond'}),
+      Plot.dot(ex_filtered, {x: 'exendy', y: (d) => d.extrt + " " + d.exdose + d.exdosu, stroke: 'extrt', symbol: 'circle'})
+    ]
+  }))
+))
+}});
+
+define({id: "cc7187d2", inputs: ["view","Inputs"], outputs: ["imputeae"], body: (view,Inputs) => {
+const imputeae = view(Inputs.toggle({label: "Impute end of AE?"}));
+return {imputeae};
+}});
+
+define({id: "8157171e", inputs: ["view","Inputs","imputeae"], outputs: ["datacutoff"], body: (view,Inputs,imputeae) => {
+const datacutoff = view(Inputs.date({label: "Data cut-off date:", disabled: !imputeae}));
+return {datacutoff};
+}});
+
+define({id: "abbcda25", inputs: ["Plot","usubjid","_","patient_data","adae_filtered","datacutoff","imputeae"], outputs: ["ae_fun"], body: (Plot,usubjid,_,patient_data,adae_filtered,datacutoff,imputeae) => {
+  const ae_fun = (width) => Plot.plot({
+    width,
+    inset: 15,
+    height: 200,
+    caption: usubjid,
+    y: {label: null, grid: true, transform: (d) => _.capitalize(d)},
+    x: {nice: true},
+    color: {legend: true, 
+            tickFormat: (d) => _.capitalize(d) + " severity"},
+    marginLeft: 170,
+    marks: [
+      Plot.ruleX(patient_data,{
+        x: (d) => new Date(d.trtsdt),
+        strokeWidth: 1,
+        opacity: 0.2
+      }),
+      Plot.ruleY(adae_filtered,
+                {x1: (d) => new Date(d.astdt),
+                  x2: (d) => d.aendt===null ? datacutoff : new Date(d.aendt),
+                  y: 'aedecod',
+                  stroke: 'aesev',
+                  tip: true}),
+      Plot.dot(adae_filtered,{
+        x: (d) => new Date(d.astdt),
+        y: 'aedecod',
+        stroke: 'aesev',
+        symbol: 'asterisk',
+        tip: !(imputeae & datacutoff!==null)
+      }),
+      Plot.dot(adae_filtered,{
+        x: (d) => d.aendt!==null ? new Date(d.aendt) : datacutoff,
+        y: 'aedecod',
+        stroke: 'aesev',
+        symbol: (d) => d.aendt!==null ? 'circle' : 'times'
+      }),
+      Plot.text(adae_filtered, Plot.selectMinX({
+        x: (d) => d.astdt,
+        y: (d) => _.capitalize(d.aedecod),
+        text: "start"
+      }))
+    ]
+  })
+return {ae_fun};
+}});
+
+define({id: "89352325", inline: true, inputs: ["resize","ae_fun","display"], body: async (resize,ae_fun,display) => {
+display(await(
+  resize( (width) => ae_fun(width))
+))
+}});
+
+define({id: "0f41a422", inputs: ["display","Inputs","sql"], outputs: ["race_tbl"], body: async (display,Inputs,sql) => {
+const race_tbl = ((_) => (display(Inputs.table(_)), _))(await sql`SELECT CONCAT(UPPER(LEFT(race, 1)), SUBSTRING(LOWER(race),2)) as 'Race', 
+       COUNT(race) AS 'Number of Subjects' FROM 
+  (
+    SELECT DISTINCT usubjid, race
+    FROM adae 
+  )
+GROUP BY race;`);
+return {race_tbl};
+}});
+
+define({id: "bfcdeefd", inputs: ["display","Inputs","sql"], body: async (display,Inputs,sql) => {
+display(Inputs.table(await sql`SELECT a.usubjid, a.astdt, a.trtsdt, b.trtsdt AS trtsdt_adsl,
+DATEDIFF('DAY', CAST(b.trtsdt AS DATE), CAST(a.astdt AS DATE)) + CAST(a.astdt>=b.trtsdt AS BIGINT) AS study_day,
+a.astdy
+FROM
+adae AS a LEFT JOIN adsl AS b ON a.usubjid=b.usubjid;`));
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Obervable Playground</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./adaflow">ADA process flow</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./adam">ADaM</a></li>
+    <li class="observablehq-link"><a href="./test">Patients&#x27; Profiles</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type), h2:first-child, :not(h1) + h2">
+<nav>
+<div>Contents</div>
+<ol>
+<li class="observablehq-secondary-link"><a href="#patient-profile">Patient Profile</a></li>
+<li class="observablehq-secondary-link"><a href="#aggregated-data">Aggregated data</a></li>
+<li class="observablehq-secondary-link"><a href="#exposure">Exposure</a></li>
+<li class="observablehq-secondary-link"><a href="#adverse-events">Adverse Events</a></li>
+<li class="observablehq-secondary-link"><a href="#sql">SQL</a></li>
+</ol>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div id="cell-6e69e8d0" class="observablehq observablehq--block"></div>
+<h1 id="adam" tabindex="-1"><a class="observablehq-header-anchor" href="#adam">ADaM</a></h1>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        ADLB
+      </button>
+    </h2> 
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="card" style="padding: 0;">
+            <h2>ADLBC</h2>
+            <h3>Chemistry / Hepatic Labs</h3>
+            <span id="cell-0f17940a" class="observablehq--loading"></span>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        ADSL
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card" style="display: flex; flex-direction: column; gap: 1rem;">
+        <span id="cell-a4d84b0a" class="observablehq--loading"></span>
+        <span id="cell-1a29e652" class="observablehq--loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        ADVS
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card" style="padding: 0;">
+          <span id="cell-bc62b7b6" class="observablehq--loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEx" aria-expanded="false" aria-controls="collapseEx">
+      EX
+    </button></h2>
+    <div id="collapseEx" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card" style="padding: 0;">
+        <span id="cell-d16477b3" class="observablehq--loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMh" aria-expanded="false" aria-controls="collapseMh">
+      MH
+    </button></h2>
+    <div id="collapseMh" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card" style="mpadding: 0;">
+        <span id="cell-a3bba44a" class="observablehq--loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" style="max-width: 100vw;">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdae" aria-expanded="false" aria-controls="collapseAdae">
+      ADAE
+    </button></h2>
+    <div id="collapseAdae" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card" style="padding: 0;">
+        <span id="cell-7dfd56f7" class="observablehq--loading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="cell-3df8f200" class="observablehq observablehq--block"></div>
+<div id="cell-42f0257e" class="observablehq observablehq--block"></div>
+<div id="cell-c2cc4024" class="observablehq observablehq--block"></div>
+<div id="cell-2d7effd6" class="observablehq observablehq--block"></div>
+<div id="cell-a6cefd63" class="observablehq observablehq--block"></div>
+<div id="cell-d6234365" class="observablehq observablehq--block"></div>
+<div id="cell-f8386719" class="observablehq observablehq--block"></div>
+<div id="cell-3cbcb37d" class="observablehq observablehq--block"></div>
+<div id="cell-c6673746" class="observablehq observablehq--block"></div>
+<div id="cell-2936ffc4" class="observablehq observablehq--block"></div>
+<h2 id="patient-profile" tabindex="-1"><a class="observablehq-header-anchor" href="#patient-profile">Patient Profile</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Infomation</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Age</td>
+<td style="text-align:left"><span id="cell-0979d0e3" class="observablehq--loading"></span></td>
+</tr>
+<tr>
+<td style="text-align:center">Sex</td>
+<td style="text-align:left"><span id="cell-c74f8539" class="observablehq--loading"></span></td>
+</tr>
+<tr>
+<td style="text-align:center">Medical History</td>
+<td style="text-align:left"><span id="cell-168f67c9" class="observablehq--loading"></span></td>
+</tr>
+</tbody>
+</table>
+<div id="cell-50603299" class="observablehq observablehq--block"></div>
+<div class="card">
+<span id="cell-fa912ca9" class="observablehq--loading"></span>
+</div>
+<div id="cell-131178bf" class="observablehq observablehq--block"></div>
+<div id="cell-8eaeaddb" class="observablehq observablehq--block"></div>
+<div id="cell-8db9be08" class="observablehq observablehq--block"></div>
+<div class="card" style="display: flex; flex-direction: column; gap: 1rem;">
+  <span id="cell-3f161dec" class="observablehq--loading"></span>
+  <span id="cell-5a705099" class="observablehq--loading"></span>
+</div>
+<div id="cell-f3ff595b" class="observablehq observablehq--block"></div>
+<div id="cell-f3c1b4c9" class="observablehq observablehq--block observablehq--loading"></div>
+<div id="cell-813a6383" class="observablehq observablehq--block"></div>
+<div id="cell-b804aeaa" class="observablehq observablehq--block"></div>
+<div id="cell-7fadb026" class="observablehq observablehq--block observablehq--loading"></div>
+<div id="cell-ce60fac1" class="observablehq observablehq--block"></div>
+<div id="cell-35ab1f6e" class="observablehq observablehq--block"></div>
+<h2 id="aggregated-data" tabindex="-1"><a class="observablehq-header-anchor" href="#aggregated-data">Aggregated data</a></h2>
+<p>Mean value of selected rows is <span id="cell-6403fcc3" class="observablehq--loading"></span>.</p>
+<div id="cell-bd9c1404" class="observablehq observablehq--block"></div>
+<div id="cell-967a2195" class="observablehq observablehq--block"></div>
+<div id="cell-3ea822e0" class="observablehq observablehq--block"></div>
+<div class="card" style="padding: 0;">
+<span id="cell-1c84b413" class="observablehq--loading"></span>
+</div>
+<div id="cell-0fe16c62" class="observablehq observablehq--block"></div>
+<div id="cell-56b55d8b" class="observablehq observablehq--block"></div>
+<div class="card" style="max-width: 100%;">
+<span id="cell-393d82b7" class="observablehq--loading"></span></div>
+<div id="cell-fa890d1a" class="observablehq observablehq--block"></div>
+<div class="card" style="padding: 0;">
+<span id="cell-cda25a0c" class="observablehq--loading"></span>
+</div>
+<div id="cell-8f753930" class="observablehq observablehq--block"></div>
+<div id="cell-4fcc2dbb" class="observablehq observablehq--block"></div>
+<h2 id="exposure" tabindex="-1"><a class="observablehq-header-anchor" href="#exposure">Exposure</a></h2>
+<div class="card">
+<span id="cell-1cda1035" class="observablehq--loading"></span>
+</div>
+<h2 id="adverse-events" tabindex="-1"><a class="observablehq-header-anchor" href="#adverse-events">Adverse Events</a></h2>
+<div id="cell-cc7187d2" class="observablehq observablehq--block"></div>
+<div id="cell-8157171e" class="observablehq observablehq--block"></div>
+<div id="cell-abbcda25" class="observablehq observablehq--block"></div>
+<div class="card">
+<span id="cell-89352325" class="observablehq--loading"></span>
+</div>
+<h2 id="sql" tabindex="-1"><a class="observablehq-header-anchor" href="#sql">SQL</a></h2>
+<div id="cell-0f41a422" class="observablehq observablehq--block"></div>
+<pre data-language="sql"><code class="language-sql"><span class="hljs-keyword">SELECT</span> CONCAT(<span class="hljs-built_in">UPPER</span>(<span class="hljs-keyword">LEFT</span>(race, <span class="hljs-number">1</span>)), <span class="hljs-built_in">SUBSTRING</span>(<span class="hljs-built_in">LOWER</span>(race),<span class="hljs-number">2</span>)) <span class="hljs-keyword">as</span> <span class="hljs-string">'Race'</span>, 
+       <span class="hljs-built_in">COUNT</span>(race) <span class="hljs-keyword">AS</span> <span class="hljs-string">'Number of Subjects'</span> <span class="hljs-keyword">FROM</span> 
+  (
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> usubjid, race
+    <span class="hljs-keyword">FROM</span> adae 
+  )
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> race;
+</code></pre>
+<div id="cell-bfcdeefd" class="observablehq observablehq--block"></div>
+<pre data-language="sql"><code class="language-sql"><span class="hljs-keyword">SELECT</span> a.usubjid, a.astdt, a.trtsdt, b.trtsdt <span class="hljs-keyword">AS</span> trtsdt_adsl,
+DATEDIFF(<span class="hljs-string">'DAY'</span>, <span class="hljs-built_in">CAST</span>(b.trtsdt <span class="hljs-keyword">AS</span> <span class="hljs-type">DATE</span>), <span class="hljs-built_in">CAST</span>(a.astdt <span class="hljs-keyword">AS</span> <span class="hljs-type">DATE</span>)) <span class="hljs-operator">+</span> <span class="hljs-built_in">CAST</span>(a.astdt<span class="hljs-operator">&gt;=</span>b.trtsdt <span class="hljs-keyword">AS</span> <span class="hljs-type">BIGINT</span>) <span class="hljs-keyword">AS</span> study_day,
+a.astdy
+<span class="hljs-keyword">FROM</span>
+adae <span class="hljs-keyword">AS</span> a <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> adsl <span class="hljs-keyword">AS</span> b <span class="hljs-keyword">ON</span> a.usubjid<span class="hljs-operator">=</span>b.usubjid;
+</code></pre>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank">Observable</a> on <a title="2024-03-10T15:50:51">Mar 10, 2024</a>.</div>
+</footer>
+</div>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>ADA process flow | Obervable Playground</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/mermaid.js">
+<link rel="modulepreload" href="./_npm/mermaid@10.9.0/dist/mermaid.esm.min.mjs/+esm.js">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+
+define({id: "cadd7171", inputs: ["mermaid","display"], body: async (mermaid,display) => {
+display(await(
+await mermaid`graph TD;
+    ADA[ADA] --> ADAstatus{ADA\\nstatus}
+    ADAstatus --> |No record| ADAnrnaba{and}
+    ADAstatus --> |Detected| ADApresent[ADA Present]
+    ADAstatus --> |Not Detected| ADAnd[ADA Not Detected];
+    
+    
+    titerstatus --> |Available| ADAnrta
+    ADAstatus --> |No record| ADAnrta{and}
+    ADAnrta --> ADApresent
+
+    ADAnd -- DrgC <= ADA DT --> ADAnp[ADA Not Present];
+    ADAnd -- DrgC > ADA DT --> ADAi[ADA Inconclusive];
+    ADAnd -- DrgC Missing --> ADAnddcna[ADA Not Detected, Drug Concentration Not Available]
+
+
+
+    titer[Titer] --> titerstatus{Titer\\nstatus}
+    
+    titerstatus --> |Available| titeravailadap[Ttier value from the source data]
+    ADApresent --> titeravailadap
+
+    titerstatus --> |Not Available| titernotavailadanp[Tier Num value=MRD value;\\nTiter Char value= ADA Present, no titer available]   
+
+    titerstatus --> |Not Performed| titernotperfadanp[Titer Num value=0\\nTiter Char value=ADA Not Present]
+    ADAnp --> titernotperfadanp
+    
+    titerstatus --> |Not Performed| titernotperfadai[Titer Num value=missing\\nTiter Char value=ADA inconclusive] 
+    ADAi --> titernotperfadai
+
+    
+    ADAnrnaba --> ADApresent
+
+    adapnaba
+
+    nab[NAb] --> nabstatus{NAb\\nStatus}
+    nabstatus --> |Detected| nabpresent[NAb Present]
+    nabstatus --> |Available| ADAnrnaba
+    nabstatus --> |Not Detected| nabdc{Drug\\nConcentration}
+    nabdc --> |<=NAb DT| nabnp[NAb Not Present]
+    ADAi --> nabinor
+    nabdc --> |>NAb DT| nabinor{or}
+
+
+    nabinor --> nabi[NAb inconclusive]
+    nabdc --> |Missing| nabmiss[NAb Not Detected,\\nDrug Concentration\\nNot Available]
+    ADApresent --> adapnaba
+    nabdc --> |No record| adapnaba{and}
+    adapnaba --> nabnr[ADA Present. No NAb available]`
+))
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Obervable Playground</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./adaflow">ADA process flow</a></li>
+    <li class="observablehq-link"><a href="./adam">ADaM</a></li>
+    <li class="observablehq-link"><a href="./test">Patients&#x27; Profiles</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type), h2:first-child, :not(h1) + h2">
+<nav>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<h1 id="ada-process-flow" tabindex="-1"><a class="observablehq-header-anchor" href="#ada-process-flow">ADA process flow</a></h1>
+<div id="cell-cadd7171" class="observablehq observablehq--block observablehq--loading"></div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank">Observable</a> on <a title="2024-03-10T15:50:51">Mar 10, 2024</a>.</div>
+</footer>
+</div>
